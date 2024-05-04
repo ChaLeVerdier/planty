@@ -1,0 +1,9 @@
+# Ignorer l'index
+/index.php
+
+# Ignorer le fichier readme.md
+/readme.md
+
+# Ignorer les dossier  /updraft & /uploads
+/updraft
+/uploads
