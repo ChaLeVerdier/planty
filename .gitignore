@@ -7,3 +7,7 @@
 # Ignorer les dossier  /updraft & /uploads
 /updraft
 /uploads
+
+# Ignorer les sauvegardes
+/ai1wm-backups
+/upgrade-temp-backup
