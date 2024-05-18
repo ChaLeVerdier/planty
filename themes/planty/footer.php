@@ -23,7 +23,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 		
 	astra_footer_before();
 		
-	astra_footer();
+	//astra_footer();
+	//Inclure le footer personnalisé
+	get_template_part('footer-custom'); // Création d'un fichier footer-custom.php à la racine qui recevra le code de notre footer personnalisé
 		
 	astra_footer_after(); 
 ?>

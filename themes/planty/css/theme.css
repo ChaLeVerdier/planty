@@ -1,3 +1,158 @@
-.home {
-    background-color: blue;
+/********** GENERAL ***********/
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap');
+
+
+*, /* Pour tous le site : Reset des valeurs par defaut */
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+}
+* {
+  font-family: "syne", sans-serif;
+}
+html {
+  font-family: "syne", sans-serif;
+}
+:root {
+  --main-color: white;
+  --main-bg-color: ;
+  --filter-bg-color: ;
+  --font-size-small: ;
+  --font-size-medium: ;
+  --max-width: ;
+  --min-width: ;
+}
+.hero{ /* conteneur de la canette */ 
+  height: 618px ;
+  width: 640px;
+  position: relative;
+  /* background-color: yellow; */
+}
+.canette{ /* *** home image centrale canette *** */
+  z-index: 2;
+  position: absolute;
+}
+.leaf-left{ /* *** home image centrale feuille gauche *** */
+  z-index: 1;
+  position: absolute;
+  left: 0px;
+  bottom: 70px; 
+  /* background-color: red; */
+}
+.leaf-right{ /* *** home image centrale feuille droite *** */
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  bottom:70px; 
+  /* background-color: green */
+}
+.divider{
+  border-radius: 0 0 20% 20%;
+}
+.toto{ 
+  border: green solid 5px !important;
+}
+.wpcf7-form-control {
+  border: green solid 5px !important;
+  justify-content: center !important;
+}
+.submit{
+  border: red solid 5px !important;
+}
+
+/********** HEADER **************/
+#site-header.sticky-top {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  background-color: white; 
+}
+.site-header {
+  width: 100%; /* Largeur de 100% pour s'adapter à la largeur de l'écran */
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+}
+.nav-list{
+  /* menu  */
+  list-style-type: none;
+  margin: 0 auto; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-item-29 .menu-link{
+    color: black;
+    padding : 20px 60px;
+    height: 100%;
+}
+.menu-item-34 .menu-link{
+    color: rgb(255, 255, 255);
+    width: 14.75em;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dc9f96;
+    text-align: center;
+}
+
+/* Menu Mobile */
+.mobile-menu {
+  display: none;
+  /* Masquer par défaut */
+}
+
+/* Menu Desktop */
+/* @ importer qq chose pour tous les medias screen (écran) existe aussi all pour tous les appareils ou print pour impression */
+@media screen and (min-width: 769px) {
+  .desktop-menu {
+    display: block;
+    /* Afficher pour les écrans de bureau à partir de 769px */
+  }
+}
+
+/* Menu Mobile */
+@media screen and (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+    /* Masquer pour les écrans mobiles */
+  }
+
+  .mobile-menu {
+    display: block;
+    /* Afficher pour les écrans mobiles */
+  }
+}
+
+
+/* BODY accueil */
+#titleh2{
+color:red
+}
+
+
+
+
+
+
+/**************** FOOTER ******************/
+#site-footer.sticky-bottom {
+  position: sticky;
+  bottom: 0;
+}
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-color);
+  width: 100%;
+  height: 60px;
+  }
+.menu-item-37 .menu-link {
+    color: black;
 }
