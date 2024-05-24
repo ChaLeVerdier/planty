@@ -9,17 +9,13 @@
     <div class="logo">     
     <?php if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) : ?>
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php the_custom_logo(); ?></a>
-       <?php else : ?>
+    <?php else : ?>
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-        <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/logo.png' ); ?>" alt="logo du site">
-        </a>
-        <!-- Récup du logo dynamiquement dans le backoffice (bonne pratique), et si non le récuérer dans les assets (statique) mais mauvaise methode -->
     <?php endif; ?>
 </div>
 
-
     <?php
-    //mon menu principal - Condition si ... tu m'affiches le menu grâce à  wp_nav_menu - 
+    //mon menu principal - Condition si ... tu m'affiches le menu grâce à wp_nav_menu - 
     // voir support pour sécurisation du menu. ressource
      if ( has_nav_menu( 'primary' ) ) {
             wp_nav_menu( array(

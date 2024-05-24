@@ -8,8 +8,6 @@
 
 
 <?php
-    //mon menu principal - Condition si ... tu m'affiche le menu grâce à  wp_nav_menu - 
-    // voir support pour sécurisation du menu. ressource chemin du menu theme parent : theme template part header
      if ( has_nav_menu( 'footer_menu' ) ) {
             wp_nav_menu( array(
                 'theme_location' => 'footer_menu', 
