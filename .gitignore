@@ -2,10 +2,10 @@
 /index.php
 
 # Ignorer les fichier :
-/readme.md
 /question.txt
 /def.txt
 /autoptimize_404_handler.php
+
 
 # Ignorer les dossier  /updraft & /uploads
 /updraft
