@@ -12,14 +12,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap');
 
-
-/* *, ::before, ::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} */
-/* pas necessaire sur un theme enfant */
-
 * {
     font-family: 'Syne', sans-serif;
 }
@@ -40,216 +32,166 @@
 }
 
 /***************** HEADER *****************/
-.site-header{
-    background-color: yellow;
+/* En-tête du site */
+.site-header {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-.main-nav{
-    background-color: red;
-}
-.nav-list{
-    display: flex;
-
-}
-/*header */
-/* #site-header.sticky-top {
-    position: sticky;
-    z-index: 10;
-    top: 0;
-    /* background-color: white; 
- {*/
-
-
-/* .site-header {
-    width: 100%;
-   Largeur de 100% pour s'adapter à la largeur de l'écran 
-    display: flex;
+    width: 100%;/* Largeur de 100% pour s'adapter à la largeur de l'écran */
     height: 80px;
     align-items: center;
     justify-content: space-between;
     background-color: white;
-}*/
-
+}
 /* Logo */
 .custom-logo {
     margin-left: 36px;
 }
-
 /*Navigation*/
-/* .menu-link {
-    color: red;
-}
 .nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     list-style-type: none;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
-.menu-item-29 .menu-link {
+.menu-link {
     color: black;
     padding: 20px 60px;
-    height: 100%;
 }
-
-/* Navigation Links */
-/*.menu-item-34 .menu-link {
-    color: rgb(255, 255, 255);
-    width: 14.75em;
-    height: 80px;
+.nav-list a {
+    color: black;
+    padding-right: 60px;
+}
+/* Navigation Links Hover */
+.menu-item-34 .menu-link {
     display: flex;
+    width: 236px;
+    height: 80px;
     align-items: center;
     justify-content: center;
+    color: rgb(255, 255, 255);
     background-color: #dc9f96;
-    text-align: center;
-} */
+}
+.nav-list a:hover{
+    color: black;
+    text-decoration: underline;
+}
 
-/* Navigation Links Hover : pas précisé */
-/* Navigation Links Active : pas précisé */
-
-/***************** HERO *****************/
-
-/* Hero title : avec gutenberg */
+/***************** PAGE HOME *****************/
 
 /* Hero Image */
 .hero {
     /* conteneur de la canette */
     height: 618px;
     width: 640px;
-    position: relative;
 }
-
 .canette {
     z-index: 2;
     position: absolute;
 }
-
-.leaf-left {
+.leaf-left { 
     z-index: 1;
-    position: absolute;
-    left: 348px;
+    left: 180px;
     bottom: 77px;
 }
-
 .leaf-right {
     z-index: 1;
-    position: absolute;
-    right: 372px;
+    right: 190px;
     bottom: 77px;
 }
-
-/***************** PAGE HOME *****************/
-.shape-divider-container {
-    margin: 0;
-    border-radius: 0, 0, 150px, 150px;
+.bouton-gouts:hover{
+    background-color: #C02E44 !important;
 }
-
-.shape-divider1 {
-    z-index: 1;
-    position: absolute;
-    width: 100%;
-    min-height: 70px;
-    border: 0;
-    margin: 0;
-}
-
-.shape-divider2 {
-    z-index: 2;
-    position: absolute;
-    transform: translateY(-5px);
-    border: 0;
-}
-
-.bloc-comment {
-    align-items: center;
-    justify-content: space-between;
-}
-
-.footer-cans {
-    padding-top: 70px;
-    margin: 0px;
-    background-color: #FFFFFF;
-}
-
-.entry-content[ast-blocks-layout]>figure {
-    /*class trouvée sur l'inspecteur (pour enlever la marge en bas des canettes) */
-    margin-bottom: 0;
-}
-
 /***************** PAGE NOUS-RENCONTRER *****************/
-
-.fleurs-top {
-    position: relative;
-    right: 200px;
-    top: 70px;
+/* section nous-rencontrer */
+.nous-rencontrer{
+    z-index: 1;
+    background-image: url("http://planty.local/wp-content/uploads/2024/05/icon-flower.png");
+    background-size: 145px 150px;
+    background-position: left 55px;
+    background-repeat: no-repeat;
 }
-
-.section-equipe {
-    max-height: 554px;
+/* section équipe */
+.section-equipe{
+    z-index: 1;
+    background-image: url("http://planty.local/wp-content/uploads/2024/05/icon-branch-left.png");
+    background-size: 191px 219px;
+    background-position: right bottom;
+    background-repeat: no-repeat;
 }
-.equipe-feuille {
-    z-index: -1;
-    position: relative;
-    right: -170px;
-    bottom: 250px;
-}
-.form-feuille ::before ::after {
-    z-index: 5;
-    position: relative;
-    left: 380px;
-    bottom: 300px;
-}
-
+/* section formulaire et pied de page */
 /* Formulaire  */
-.wpcf7-form-control {
-    border: 1px solid red;
-    z-index: 10;
+.wpcf7-form-control { /*element parent formulaire */
+    z-index: 1;
     padding: 0;
 }
-span[data-name="message"]{
-    position: relative;
-    z-index: 5;
-}
-span[data-name="message"]::before{
+span[data-name="message"]::before{ /*element enfant ajouté avant span massage */
     content: url(http://planty.local/wp-content/uploads/2024/05/icon-leaf.png);
     width: 100px;
     height: 80px;
-    background: #000;
-    z-index: 1;
+    z-index: -1;
     position: absolute;
-    left: -50px;
-    bottom: 0;
+    left: -85px;
+    bottom: 40px;
 }
-.wpcf7-form-control .wpcf7-textarea{
-    border: 1px solid red;
-    z-index: 10;
+span[data-name="message"] { /* element enfant span message*/
+    position: relative;
+    z-index: 2;
+    padding: 0 !important;
 }
-.sr-only {
+.submit:hover {
+    background-color: #C02E44 !important;
+    }
+/* .sr-only { est ce necessaire ?
     position: absolute;
     left: -10000px;
     top: auto;
     width: 1px;
     height: 1px;
     overflow: hidden;
-}
+} */
 
 /**************** PAGE COMMANDER *****************/
-.fruits-nb{
-    display: flex;
-    width: 100%;
-    background-color: #C02E44;
-}
-.group-nb p{
-    display: flex;
-    background-color: yellow;
-    }
-.contact-form-7 {
+
+.section-formulaire {
     align-content: center;
 }
-.contact-form__group{
-    border: none !important;
+.fruits-nb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+img {
+    display: flex;
+    width: 192px;
+    height: auto;
+    margin: 0 auto;
+}
+.quantity-input {
+    width: 39px !important;
+        /* Largeur fixe de l'input */
+    height: 56px !important;
+        /* Hauteur fixe de l'input */
+    text-align: center;
+    margin: 20px 76px;
+    font-size: 1.2em;
+    background-color: white;
+    color: black;
+    border: none;
+    /* Pour retirer les flèches du compteur */
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+.separator-horizontal{    
+    display:flex;
+    width: 100%;
+    height: 0.5px;
+    background-color: white;
+}
+.separator-vertical { /* NE FONCTIONNE PAS */
+    width: 100%;
+    height: 1px;
+    background-color: white;
 }
 .informations-livraisons {
     align-items: center;
@@ -258,58 +200,46 @@ span[data-name="message"]::before{
     gap: 20px;
     /* Espace entre les groupes */
 }
-.contact-form__group {
+.contact-form__group { /* Vos infos+livraison: style du conteneurs */
+    border: none !important;
     flex: 1;
     min-width: 300px;
-    /* Largeur minimale pour chaque groupe */
-    border: 1px solid #ccc;
-    /* Optionnel: bordure pour délimiter chaque fieldset */
     padding: 1rem;
-    /* Optionnel: padding interne pour chaque fieldset */
     border-radius: 4px;
-    /* Optionnel: coins arrondis pour chaque fieldset */
 }
-.contact-form__legend {
+
+.contact-form__legend { /* Vos infos+livraison : Style text */
     font-weight: bold;
     margin-bottom: 1rem;
     color: white;
     border: none !important;
     font-size: 1.5rem;
-    font-weight: 700;
-    /* Espace entre la légende et les champs */
-}
-.separator{
-    display:block;
-    width: 100%;
-    height: 10px;
-    background-color: #ee4305;
-}
-.contact-form__field {
+    font-weight: 600; 
+    padding: 0;
+    }
+.contact-form__field { /* Vos infos+livraison : Hauteur entre les champs */
     margin-bottom: 1rem;
     flex-direction: column;
 }
-
-.contact-form__label {
+.contact-form__label { /* Vos infos+livraison : Hauteur entre les champs et label */
     display: block;
     margin-bottom: 0.5rem;
-    font-weight: bold;
+    font-weight: 400;
 }
-
-.contact-form__input {
+.contact-form__input { /* Vos infos+livraison : Style des champs */
     width: 100%;
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-.saveur-button {
+.info-livraison-button {        /* A REVOIR - TROP BAS */
     border: 1px solid #dc9f96 !important;
     border-radius: 7px !important;
 }
-
-.info-livraison-button {
-    border: 1px solid #dc9f96 !important;
-    border-radius: 7px !important;
+.info-livraison-button:hover {
+    background-color:#C02E44 !important;
+    border: none !important;
 }
 
 /**************** FOOTER ******************/
@@ -318,7 +248,6 @@ span[data-name="message"]::before{
     position: sticky;
     bottom: 0;
 }
-
 .site-footer {
     display: flex;
     align-items: center;
@@ -327,13 +256,17 @@ span[data-name="message"]::before{
     width: 100%;
     height: 60px;
 }
-
 .menu-item-37 .menu-link {
     color: black;
 }
 
 
-/* RESPONSIVE */
+/* RESPONSIVE DESIGN */
+
+/* 1440 : ordi */
+/* 1024 : notebook */
+/* 768 : tablette */
+/* 480 : smartphone */
 
 .mobile-menu {
     display: none;
@@ -341,29 +274,60 @@ span[data-name="message"]::before{
 }
 
 /* Menu Mobile */
-@media all and (max-width: 1200px) {
+@media all and (max-width: 768px) {
     .desktop-menu {
         display: none;
         /* Masquer pour les écrans mobiles */
     }
-
     .mobile-menu {
         display: block;
         /* Afficher pour les écrans mobiles */
+    } 
+    .fruits-nb { /* Page Commande : formulaire */
+        flex-direction: column;
+        align-items: center;
+    }
+    .container {
+        width: 100%;
+        max-width: 192px;
+    }
+    .informations-livraisons {
+        flex-direction: column;
+    }
+    .contact-form__group {
+        flex: 1 1 100%;
+    }
+    .separator-vertical {
+        display: none;
     }
 
-    .container {
-        width: 970px;
+    /* FOOTER */
+    .site-footer {
+        height: 60px;
+        /* ajuster la hauteur pour les petits écrans */
+    }
+    .site-footer p {
+        font-size: 12px;
+        /* ajuster la taille du texte pour les petits écrans */
     }
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 320px) {
     .desktop-menu {
         display: block;
         /* Afficher pour les écrans de bureau à partir de 769px */
     }
-
     .container {
         width: 750px;
+    }
+}
+
+
+
+
+@media (max-width: 480px) {
+    .site-footer {
+        height: 3px;
+        /* ajuster la hauteur pour les très petits écrans */
     }
 }

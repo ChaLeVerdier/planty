@@ -175,6 +175,14 @@
   overflow: hidden;
   }
 
+/* .form-feuille ::before ::after { RETIRE PARCEQUE PLUS NECESSAIRE
+    z-index: 5;
+    position: relative;
+    left: 380px;
+    bottom: 300px;
+} */
+
+
 /**************** PAGE COMMANDER *****************/
 .contact-form-7{
   align-content: center;

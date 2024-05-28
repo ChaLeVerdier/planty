@@ -6,6 +6,7 @@
     PAGE ACCUEIL :
     Pour l'image Hero de la page d'accueil : pour tester le comportement des différents éléments : j'ai appliqué une bordure de couleur différente à chacun.
 
+    Pour les feuilles derrière la canette du Hero, test de "position: absolute;" mais ne fonctionnait pas en mode responsive elles s'éloignaient de la canette.
 
     En travaillant dans header.php, le comportement de mes pages a changé. après quelques tests de style et de revision de mon code. J'ai finalement été rechercher un de mes commit et mon site est revenu à la normal.
 
