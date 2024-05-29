@@ -9,17 +9,17 @@
 //     wp_nav_menu('footer', 'Footer Menu');
 // }
 
+// wp_enqueue = hook
+add_action('wp_enqueue_scripts', 'child_theme_enqueue_styles');
+
 function child_theme_enqueue_styles()
 {
     //chargement du thème parent
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css'); 
     //chargement du thème enfant
-    wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/style.css', array('parent-style'), '1.0', 'all');
-    // wp_enqueue_style('child-theme', get_stylesheet_directory_uri() . '/css/theme.css', array('parent-style'), '1.0','all'); 
+    wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/style.css', array('parent-style'), '1.0', 'all', filemtime(get_stylesheet_directory() . '/style.css'));
 }
 
-// wp_enqueue = hook
-add_action('wp_enqueue_scripts', 'child_theme_enqueue_styles');
 
 function add_admin_link_to_menu( $items, $args ) {
    // Vérifier si l'utilisateur est connecté et a le rôle d'administrateur

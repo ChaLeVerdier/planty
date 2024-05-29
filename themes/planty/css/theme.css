@@ -289,3 +289,110 @@
       width: 750px;
     }
 }
+
+/* TESTS RESPONSIVE */ 
+@media all and (max-width: 768px) {
+
+  /* NAVIGATION */
+  .desktop-menu {
+    display: none;
+    /* Masquer pour les écrans mobiles */
+  }
+
+  .mobile-menu {
+    display: none;
+    /* Afficher pour les écrans mobiles */
+  }
+
+  .site-header {
+    display: flex;
+    width: 768px;
+  }
+
+  /* Logo */
+  .custom-logo {
+    width: 50%;
+    margin-left: 10px;
+  }
+
+  .site-content {
+    max-width: 768px;
+  }
+
+  /* PAGE COMMANDER */
+  .fruits-nb {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 192px;
+  }
+
+  .separator-horizontal {
+    display: flex;
+    width: 100%;
+    height: 2px;
+    margin: 30px 0;
+    background-color: white;
+  }
+
+  .informations-livraisons {
+    max-width: 45%;
+  }
+
+  .contact-form__legend {
+    /* Vos infos+livraison : Style text */
+    font-size: 1rem;
+  }
+
+  .separator-vertical {
+    display: none;
+  }
+
+  .info-livraison-button {
+    font-weight: bold !important;
+    font-size: 10px !important;
+    padding: 10px !important;
+  }
+
+  /* FOOTER */
+  .menu-item-37 .menu-link {
+    font-size: 12px;
+    padding-top: 15px;
+    color: black;
+  }
+
+  .site-footer {
+    width: 768px;
+  }
+
+  @media (max-width: 220px) {
+
+    .site-header {
+      display: flex;
+      width: 220px;
+    }
+
+    /* Logo */
+    .custom-logo {
+      width: 25%;
+      margin-left: 10px;
+    }
+
+    .site-content {
+      max-width: 220px;
+    }
+
+    /* FOOTER */
+
+    .menu-item-37 .menu-link {
+      font-size: 10px;
+      padding-top: 10px;
+    }
+
+    .site-footer {
+      width: 220px;
+    }
+  }
