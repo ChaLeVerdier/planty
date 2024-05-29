@@ -152,8 +152,9 @@ span[data-name="message"] { /* element enfant span message*/
 
 /**************** PAGE COMMANDER *****************/
 
-.section-formulaire {
+.contact-form-7 {
     align-content: center;
+    width: 100% !important;
 }
 .fruits-nb {
     display: flex;
@@ -185,7 +186,7 @@ img {
 .separator-horizontal{    
     display:flex;
     width: 100%;
-    height: 0.5px;
+    height: 2px;
     background-color: white;
 }
 .separator-vertical { /* NE FONCTIONNE PAS */
@@ -323,9 +324,16 @@ img {
 }
 
 
-
-
-@media (max-width: 480px) {
+@media (max-width: 320px) {
+    .informations-livraisons {
+        flex-direction: column;
+    }
+    .contact-form__group {
+        flex: 1 1 100%;
+    }
+    .separator-vertical {
+        display: none;
+    }
     .site-footer {
         height: 3px;
         /* ajuster la hauteur pour les très petits écrans */
