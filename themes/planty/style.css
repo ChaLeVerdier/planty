@@ -31,21 +31,19 @@
     --color-black: #000000;
 }
 
-/***************** HEADER *****************/
-/* En-tête du site */
+/** HEADER **/
 .site-header {
     display: flex;
-    width: 100%;/* Largeur de 100% pour s'adapter à la largeur de l'écran */
+    width: 100%;
     height: 80px;
     align-items: center;
     justify-content: space-between;
     background-color: white;
 }
-/* Logo */
 .custom-logo {
     margin-left: 36px;
 }
-/*Navigation*/
+/** Navigation **/
 .nav-list {
     display: flex;
     align-items: center;
@@ -71,18 +69,17 @@
     height: 80px;
     align-items: center;
     justify-content: center;
-    color: rgb(255, 255, 255);
-    background-color: #dc9f96;
+    color: #fff;
+    background-color: var(--color-btn);
 }
 .menu-item-34 .menu-link:hover{
     color: white;
     text-decoration: underline;
 }
 
-/***************** PAGE HOME *****************/
+/** HOME **/
 
-/* Hero Image */
-.hero {
+.hero { /* Hero Image */
     /* conteneur de la canette */
     height: 618px;
     width: 640px;
@@ -92,28 +89,27 @@
     position: absolute;
 }
 .leaf-left { 
-    z-index: 1;
     left: 180px;
     bottom: 77px;
 }
 .leaf-right {
-    z-index: 1;
     right: 190px;
     bottom: 77px;
 }
-.bouton-gouts:hover{
-    background-color: #C02E44 !important;
+.bouton-gouts a:hover{
+    background-color: var(--color-btn-hover) !important;
 }
-/***************** PAGE NOUS-RENCONTRER *****************/
-/* section nous-rencontrer */
+
+/** NOUS RENCONTRER **/
 .nous-rencontrer{
     z-index: 1;
     background-image: url("http://planty.local/wp-content/uploads/2024/05/icon-flower.png");
     background-size: 145px 150px;
-    background-position: left 55px;
+    background-position: 45px 55px;
     background-repeat: no-repeat;
-}
-/* section équipe */
+    overflow: hidden; /* Prévention du débordement visuel */
+}   
+/** Section équipe **/
 .section-equipe{
     z-index: 1;
     background-image: url("http://planty.local/wp-content/uploads/2024/05/icon-branch-left.png");
@@ -121,13 +117,17 @@
     background-position: right bottom;
     background-repeat: no-repeat;
 }
-/* section formulaire et pied de page */
-/* Formulaire  */
-.wpcf7-form-control { /*element parent formulaire */
+
+/* Formulaire et pied de page */
+.wpcf7-form-control { /* élément parent */
     z-index: 1;
     padding: 0;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-span[data-name="message"]::before{ /*element enfant ajouté avant span massage */
+span[data-name="message"]::before{ /*element enfant, ajouté avant "span message" */
     content: url(http://planty.local/wp-content/uploads/2024/05/icon-leaf.png);
     width: 100px;
     height: 80px;
@@ -136,115 +136,108 @@ span[data-name="message"]::before{ /*element enfant ajouté avant span massage *
     left: -85px;
     bottom: 40px;
 }
-span[data-name="message"] { /* element enfant span message*/
+span[data-name="message"] { /* element enfant "span message" */
     position: relative;
     z-index: 2;
     padding: 0 !important;
 }
 .submit:hover {
-    background-color: #C02E44 !important;
+    background-color: var(--color-btn-hover) !important;
     }
-/* .sr-only { est ce necessaire ?
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-} */
 
-/**************** PAGE COMMANDER *****************/
-
-.contact-form-7 {
-    align-content: center;
-    width: 100% !important;
-}
+/** PAGE COMMANDER **/
 .fruits-nb {
     display: flex;
-    justify-content: center;
+    max-width: 64%;
+    justify-content: space-around;
     align-items: center;
-    gap: 20px;
+    margin: auto;
+    gap: 26px;
 }
-img {
+/* img { A VOIR SI REELEMENT NECESSAIRE !
     display: flex;
     width: 192px;
     height: auto;
-    margin: 0 auto;
-}
-.quantity-input {
-    width: 39px !important;
-        /* Largeur fixe de l'input */
+    } */
+.quantity-input { 
+    width: 60px !important;
     height: 56px !important;
-        /* Hauteur fixe de l'input */
+    display: flex;
+    margin: auto;
+    margin-top: 15px;
     text-align: center;
-    margin: 20px 76px;
-    font-size: 1.2em;
-    background-color: white;
-    color: black;
-    border: none;
-    /* Pour retirer les flèches du compteur */
-    -moz-appearance: textfield;
+    font-size: 9px;
+    border-radius: 0;
     appearance: textfield;
 }
-.separator-horizontal{    
-    display:flex;
-    width: 100%;
+.separator-horizontal {
+    display: flex;
+    width: 64%;
+    margin: auto;
     height: 2px;
     background-color: white;
 }
-.separator-vertical { /* NE FONCTIONNE PAS */
-    width: 100% !important;
-    height: 1px !important;
-    background-color: white !important;
-}
 .informations-livraisons {
-    align-items: center;
+    width: 75%;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    /* Espace entre les groupes */
+    /* gap: 20px; */
 }
-.contact-form__group { /* Vos infos+livraison: style du conteneurs */
+.section {
+    flex: 1;
+    margin: 0 5px;
+    /* Espacement horizontal entre les sections */
+}
+.contact-form__group { /* style conteneur infos-livraison*/
     border: none !important;
     flex: 1;
-    min-width: 300px;
-    padding: 1rem;
-    border-radius: 4px;
+    width: 80%;
+    margin: auto;
 }
-.contact-form__legend { /* Vos infos+livraison : Style text */
-    font-weight: bold;
+.contact-form__legend {
+    /* Vos infos+livraison : Style text */
     margin-bottom: 1rem;
     color: white;
     border: none !important;
     font-size: 1.5rem;
-    font-weight: 600; 
+    font-weight: 600;
     padding: 0;
-    }
-.contact-form__field { /* Vos infos+livraison : Hauteur entre les champs */
+}
+.contact-form__field {
+    /* Vos infos+livraison : Hauteur entre les champs */
     margin-bottom: 1rem;
     flex-direction: column;
-}
-.contact-form__label { /* Vos infos+livraison : Hauteur entre les champs et label */
+    }
+    .contact-form__label {
+    /* Vos infos+livraison : Hauteur entre les champs et label */
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 400;
 }
-.contact-form__input { /* Vos infos+livraison : Style des champs */
+.contact-form__input {
+    /* Vos infos+livraison : Style des champs */
     width: 100%;
     padding: 0.5rem;
-    border: 1px solid #ccc;
     border-radius: 4px;
 }
-.info-livraison-button {        /* A REVOIR - TROP BAS */
+.separator {
+    width: 2px;
+    background-color: white;
+    margin: 0 10px;
+    /* Espacement autour de la ligne */
+}
+.info-livraison-button {
+    margin-top: 40px !important;
     border: 1px solid #dc9f96 !important;
     border-radius: 7px !important;
-}
+ }
 .info-livraison-button:hover {
-    background-color:#C02E44 !important;
+    background-color: #C02E44 !important;
     border: none !important;
 }
 
-/**************** FOOTER ******************/
+/** FOOTER **/
 
 #site-footer.sticky-bottom {
     position: sticky;
@@ -263,44 +256,146 @@ img {
 }
 
 
-/* RESPONSIVE DESIGN */
+/** RESPONSIVE **/
 
-/* 1440 : ordi */
-/* 1024 : notebook */
-/* 768 : tablette */
-/* 480 : smartphone */
-/* RESPONSIVE */
+/** Menu Mobile **/
 
 .mobile-menu {
     display: none;
-    /* Masquer par défaut */
 }
 
-/* Menu Mobile */
-@media all and (max-width: 1200px) {
+@media all and (max-width: 850px) {
     .desktop-menu {
         display: none;
         /* Masquer pour les écrans mobiles */
-    }
-
+    }   
     .mobile-menu {
         display: block;
         /* Afficher pour les écrans mobiles */
     }
-
-    .container {
-        width: 970px;
-    }
 }
+@media all and (max-width: 768px) {
 
-@media all and (min-width: 768px) {
+    /* @ NAVIGATION */
     .desktop-menu {
-        display: block;
-        /* Afficher pour les écrans de bureau à partir de 769px */
+        display: none;
+        /* Masquer pour les écrans mobiles */
+    }
+    .mobile-menu {
+       display: block;
+        /* Afficher pour les écrans mobiles */
+    }
+    .site-header {
+        display: flex;
+        max-width: 768px;
+    }
+    /* Logo */
+    .custom-logo {
+        width: 70%;
+        margin-left: 10px;
+    }
+    .body {
+        max-width: 100%;
     }
 
-    .container {
-        width: 750px;
+    /*@ NOUS RENCONTRER */
+    .nous-rencontrer { 
+        background-image: none;
+        }
+    
+    /* @ COMMANDER */
+        .fruits-nb {
+            flex-direction: column;
+            max-width: 100%;
+            margin-bottom: 35px;
+        }
+        .informations-livraisons {
+            margin-top: 50px;
+        }
+        .contact-form__group {
+            /* style conteneur infos-livraison*/
+            border: none !important;
+            flex: 1;
+            width: 100%;
+            margin: 0;
+        }
+        .contact-form__legend {
+            /* Vos infos+livraison : Style text */
+            font-weight: 400;
+            margin-top: 15px ;
+            margin-bottom: 0;
+        }
+        .contact-form__field {
+            /* Vos infos+livraison : Hauteur entre les champs */
+            margin-bottom: 1.5rem;
+        }
+        .contact-form__input {
+            /* Vos infos+livraison : Style des champs */
+            padding: 0;
+        }
+        .separator { 
+            display: none;
+        }
+        .info-livraison-button {
+            font-size: 13px !important;
+        }
+    
+    /* @ FOOTER */
+    .menu-item-37 .menu-link {
+        font-size: 12px;
+        padding-top: 15px;
+        color: black;
+        margin-bottom: 0;
     }
 }
 
+   @media all and (max-width: 320px) {
+
+       /* @ NAVIGATION */
+
+        .mobile-menu {
+           display: none; */
+           /* Afficher pour les écrans mobiles */
+       }
+       .site-header {
+           display: flex;
+           max-width: 320px;
+       }
+       /* Logo */
+       .custom-logo {
+           width: 100%;
+           margint: 10px;
+       }
+       /* .body {
+           max-width: 100%;
+       } */
+
+       /* @ COMMANDER */
+       .informations-livraisons {
+           margin-top: 25px;
+       }
+       .contact-form__group {
+           /* style conteneur infos-livraison*/
+           flex: 1;
+           padding: 0;
+       }
+       .contact-form__legend {
+           /* Vos infos+livraison : Style text */
+           margin: 30px o !important;
+       }
+       .contact-form__field {
+           /* Vos infos+livraison : Hauteur entre les champs */
+           margin-bottom: 1.5rem;
+       }
+       .info-livraison-button {
+           font-size: 13px !important;
+       }
+
+       /* @ FOOTER */
+       .menu-item-37 .menu-link {
+           font-size: 12px;
+           padding-top: 15px;
+           color: black;
+           margin-bottom: 0;
+       }
+   }
