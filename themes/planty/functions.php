@@ -23,7 +23,7 @@ function child_theme_enqueue_styles()
 
 function add_admin_link_to_menu( $items, $args ) {
    // Vérifier si l'utilisateur est connecté et a le rôle d'administrateur
-   if ( is_user_logged_in() && current_user_can( 'administrator' ) && $args->theme_location == 'primary' ) {
+   if ( is_user_logged_in() && current_user_can( 'administrator' ) && $args->theme_location == 'primary' || $args->theme_location == 'mobile_menu') {
        $admin_url = esc_url( admin_url() ); // Sécuriser l'URL
        $admin_item = "<li><a href='$admin_url'>Admin</a></li>";
        

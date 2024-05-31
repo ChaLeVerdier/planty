@@ -272,8 +272,15 @@ span[data-name="message"] { /* element enfant "span message" */
         max-width: 100%;
         margin: auto;
     }
-/** @ Navigation **/
-    
+/* @ NAVIGATION */
+    .nav-list {
+        gap: 45px; 
+    }
+    .nav-list a {
+        flex: 1; 
+        text-align: center; 
+        padding: 0;
+    }
     .nav-list a:hover {
         color: var(--color-btn);
     }
@@ -282,119 +289,82 @@ span[data-name="message"] { /* element enfant "span message" */
 @media all and (max-width: 768px) {
 
     .body {
-        max-width: 100%;
+    max-width: 100%;
     }
     .site-header {
-       flex-direction: column;
        justify-content: space-around;
     }
-    .custom-logo {
-        max-width: 100%;
-        margin: auto;
-    }
     /* @ NAVIGATION */
-    a.menu-link{
-        padding: 35px;
-    }
     .nav-list {
-        width: 100%;
-        font-size: 15px;
-        padding: 10px 0 5px 0;
+        gap: 20px; /* Espace entre les éléments */
     }
-
-    /*@ NOUS RENCONTRER */
-        .nous-rencontrer { 
-            background-image: none;
-        }
-    
+    .nav-list a {
+        flex: 1; /* Chaque élément prend une place équitable */
+        text-align: center; /* Centrer le texte à l'intérieur des éléments */
+        padding: 0;
+    }
+    /* @ NOUS RENCONTRER */
+    .nous-rencontrer { 
+        background-image: none;
+    }
     /* @ COMMANDER */
-        .fruits-nb {
-            flex-direction: column;
-            max-width: 100%;
-            margin-bottom: 35px;
-        }
-        .informations-livraisons {
-            margin-top: 50px;
-        }
-        .contact-form__group {
-            /* style conteneur infos-livraison*/
-            border: none !important;
-            flex: 1;
-            width: 100%;
-            margin: 0;
-        }
-        .contact-form__legend {
-            /* Vos infos+livraison : Style text */
-            font-weight: 400;
-            margin-top: 15px ;
-            margin-bottom: 0;
-        }
-        .contact-form__field {
-            /* Vos infos+livraison : Hauteur entre les champs */
-            margin-bottom: 1.5rem;
-        }
-        .contact-form__input {
-            /* Vos infos+livraison : Style des champs */
-            padding: 0;
-        }
-        .separator { 
-            display: none;
-        }
-        .info-livraison-button {
-            font-size: 13px !important;
-        }
+    .fruits-nb {
+        flex-direction: column;
+        max-width: 100%;
+        margin-bottom: 35px;
+    }
+    .informations-livraisons {
+        margin-top: 50px;
+    }
+    .contact-form__group {
+        /* style conteneur infos-livraison*/
+        border: none !important;
+        flex: 1;
+        width: 100%;
+        margin: 0;
+    }
+    .contact-form__legend {
+        /* Vos infos+livraison : Style text */
+        font-weight: 400;
+        margin-top: 15px ;
+        margin-bottom: 0;
+    }
+    .contact-form__field {
+        /* Vos infos+livraison : Hauteur entre les champs */
+        margin-bottom: 1.5rem;
+    }
+    .contact-form__input {
+        /* Vos infos+livraison : Style des champs */
+        padding: 0;
+    }
+    .separator { 
+        display: none;
+    }
+    .info-livraison-button {
+        font-size: 13px !important;
+    }
     
     /* @ FOOTER */
-        .menu-item-37 .menu-link {
-            font-size: 12px;
-            padding-top: 17px;
-            color: black;
-            margin-bottom: 0;
-        }
+    .menu-item-37 .menu-link {
+        font-size: 12px;
+        padding-top: 17px;
+        color: black;
+        margin-bottom: 0;
+    }
 }
 
    @media all and (max-width: 320px) {
 
-         /* @ NAVIGATION */
-        .site-header{
-            max-width: 100%;
-        }
-        a.menu-link{
-            padding: 17px;
-        }
-        .nav-list {
-        width: 100%;
-        font-size: 15px;
-        padding-top: 10px;
-        margin: 0 2px 10px 10px;
-        }
-
        /* @ COMMANDER */
-       .informations-livraisons {
-           margin-top: 25px;
-       }
-       .contact-form__group {
-           /* style conteneur infos-livraison*/
-           flex: 1;
-           padding: 0;
-       }
-       .contact-form__legend {
-           /* Vos infos+livraison : Style text */
-           margin: 30px o !important;
-       }
-       .contact-form__field {
-           /* Vos infos+livraison : Hauteur entre les champs */
-           margin-bottom: 1.5rem;
-       }
-       .info-livraison-button {
-           font-size: 13px !important;
-       }
-
-       /* @ FOOTER */
-       .menu-item-37 .menu-link {
-           font-size: 12px;
-           padding-top: 15px;
-           color: black;
-           margin-bottom: 0;
-       }
-   }
+    .informations-livraisons {
+        margin-top: 25px;
+    }
+    .contact-form__group {
+        /* style conteneur infos-livraison*/
+        padding: 0;
+    }
+    .contact-form__legend {
+        /* Vos infos+livraison : Style text */
+        margin: 30px 0 !important;
+    }
+}

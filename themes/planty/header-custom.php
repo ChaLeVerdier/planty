@@ -42,7 +42,6 @@
                 'container_class' => 'main-nav mobile-menu',
                 'container_role' => 'navigation', // Ajouter l'attribut role="navigation"
                 'items_wrap'     => '<ul class="nav-list">%3$s</ul>',
-                // 'menu_class'     => 'menu',
                 'fallback_cb'      => false,
             ) );
         }
