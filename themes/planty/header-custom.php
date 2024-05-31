@@ -34,8 +34,6 @@
     <?php
     //mon menu mobile
      if ( has_nav_menu( 'mobile_menu' ) ) {
-      // echo '<input type="checkbox" id="menu-toggle" />';
-      // echo '<label for="menu-toggle" class="menu-icon">&#9776;</label>';
             wp_nav_menu( array(
                 'theme_location' => 'mobile_menu',
                 'menu_id'        => 'site-navigation',

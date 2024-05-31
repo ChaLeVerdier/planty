@@ -117,7 +117,6 @@
     background-position: right bottom;
     background-repeat: no-repeat;
 }
-
 /* Formulaire et pied de page */
 .wpcf7-form-control { /* élément parent */
     z-index: 1;
@@ -154,11 +153,6 @@ span[data-name="message"] { /* element enfant "span message" */
     margin: auto;
     gap: 26px;
 }
-/* img { A VOIR SI REELEMENT NECESSAIRE !
-    display: flex;
-    width: 192px;
-    height: auto;
-    } */
 .quantity-input { 
     width: 60px !important;
     height: 56px !important;
@@ -238,7 +232,6 @@ span[data-name="message"] { /* element enfant "span message" */
 }
 
 /** FOOTER **/
-
 #site-footer.sticky-bottom {
     position: sticky;
     bottom: 0;
@@ -255,11 +248,9 @@ span[data-name="message"] { /* element enfant "span message" */
     color: black;
 }
 
-
 /** RESPONSIVE **/
 
 /** Menu Mobile **/
-
 .mobile-menu {
     display: none;
 }
@@ -273,34 +264,47 @@ span[data-name="message"] { /* element enfant "span message" */
         display: block;
         /* Afficher pour les écrans mobiles */
     }
+    .site-header {
+       flex-direction: column;
+       justify-content: center;
+    }
+    .custom-logo {
+        max-width: 100%;
+        margin: auto;
+    }
+/** @ Navigation **/
+    
+    .nav-list a:hover {
+        color: var(--color-btn);
+    }
 }
+
 @media all and (max-width: 768px) {
 
-    /* @ NAVIGATION */
-    .desktop-menu {
-        display: none;
-        /* Masquer pour les écrans mobiles */
-    }
-    .mobile-menu {
-       display: block;
-        /* Afficher pour les écrans mobiles */
-    }
-    .site-header {
-        display: flex;
-        max-width: 768px;
-    }
-    /* Logo */
-    .custom-logo {
-        width: 70%;
-        margin-left: 10px;
-    }
     .body {
         max-width: 100%;
     }
+    .site-header {
+       flex-direction: column;
+       justify-content: space-around;
+    }
+    .custom-logo {
+        max-width: 100%;
+        margin: auto;
+    }
+    /* @ NAVIGATION */
+    a.menu-link{
+        padding: 35px;
+    }
+    .nav-list {
+        width: 100%;
+        font-size: 15px;
+        padding: 10px 0 5px 0;
+    }
 
     /*@ NOUS RENCONTRER */
-    .nous-rencontrer { 
-        background-image: none;
+        .nous-rencontrer { 
+            background-image: none;
         }
     
     /* @ COMMANDER */
@@ -341,34 +345,29 @@ span[data-name="message"] { /* element enfant "span message" */
         }
     
     /* @ FOOTER */
-    .menu-item-37 .menu-link {
-        font-size: 12px;
-        padding-top: 15px;
-        color: black;
-        margin-bottom: 0;
-    }
+        .menu-item-37 .menu-link {
+            font-size: 12px;
+            padding-top: 17px;
+            color: black;
+            margin-bottom: 0;
+        }
 }
 
    @media all and (max-width: 320px) {
 
-       /* @ NAVIGATION */
-
-        .mobile-menu {
-           display: none; */
-           /* Afficher pour les écrans mobiles */
-       }
-       .site-header {
-           display: flex;
-           max-width: 320px;
-       }
-       /* Logo */
-       .custom-logo {
-           width: 100%;
-           margint: 10px;
-       }
-       /* .body {
-           max-width: 100%;
-       } */
+         /* @ NAVIGATION */
+        .site-header{
+            max-width: 100%;
+        }
+        a.menu-link{
+            padding: 17px;
+        }
+        .nav-list {
+        width: 100%;
+        font-size: 15px;
+        padding-top: 10px;
+        margin: 0 2px 10px 10px;
+        }
 
        /* @ COMMANDER */
        .informations-livraisons {
