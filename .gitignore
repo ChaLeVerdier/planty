@@ -1,0 +1,24 @@
+# Ignorer l'index
+/index.php
+
+# Ignorer les fichier :
+/readme.md
+/question.txt
+/def.txt
+/autoptimize_404_handler.php
+
+# Ignorer les dossier  /updraft & /uploads
+/updraft
+/uploads
+/upgrade
+
+
+# Ignorer les sauvegardes
+/ai1wm-backups
+/upgrade-temp-backup
+
+# Ignorer le cache
+/cache
+
+# Ignorer le dossier wflogs
+/wflogs
